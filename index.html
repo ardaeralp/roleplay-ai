@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>RolePlay AI</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-
 <h1>RolePlay AI</h1>
 
 <div class="container">
-
     <div class="input-group">
         <label>Agent A Adı:</label>
         <input id="agentAname" type="text" placeholder="Örn: Ajan Alpha">
     </div>
-
     <div class="input-group">
         <label>Agent A Rolü:</label>
         <input id="agentArole" type="text" placeholder="Örn: Strateji Uzmanı">
     </div>
-
     <div class="input-group">
         <label>Agent A Modeli:</label>
         <select id="agentAmodel">
@@ -28,6 +24,11 @@
             <option value="deepseek">DeepSeek</option>
             <option value="chatgpt">ChatGPT</option>
             <option value="watsonx">WatsonX</option>
+            <option value="claude">Claude</option>
+            <option value="mistral">Mistral</option>
+            <option value="cohere">Cohere</option>
+            <option value="ai21">AI21</option>
+            <option value="huggingface">Hugging Face</option>
         </select>
     </div>
 
@@ -35,12 +36,10 @@
         <label>Agent B Adı:</label>
         <input id="agentBname" type="text" placeholder="Örn: Ajan Omega">
     </div>
-
     <div class="input-group">
         <label>Agent B Rolü:</label>
         <input id="agentBrole" type="text" placeholder="Örn: Analiz Uzmanı">
     </div>
-
     <div class="input-group">
         <label>Agent B Modeli:</label>
         <select id="agentBmodel">
@@ -48,30 +47,37 @@
             <option value="deepseek">DeepSeek</option>
             <option value="chatgpt">ChatGPT</option>
             <option value="watsonx">WatsonX</option>
+            <option value="claude">Claude</option>
+            <option value="mistral">Mistral</option>
+            <option value="cohere">Cohere</option>
+            <option value="ai21">AI21</option>
+            <option value="huggingface">Hugging Face</option>
         </select>
     </div>
 
     <div class="input-group">
         <label>Başlangıç Mesajı:</label>
-        <textarea id="startMessage" placeholder="Ajanların konuşmaya başlayacağı ilk mesajı yazın."></textarea>
+        <textarea id="startMessage" placeholder="Diyaloğu başlatacak mesajı yazın."></textarea>
     </div>
 
     <button id="stepBtn">Çalıştır</button>
-
     <div id="loading">Yükleniyor...</div>
-
     <div id="errorBox"></div>
 
     <label>Diyalog:</label>
     <textarea id="conversation" readonly></textarea>
-
 </div>
 
-<script src="watsonx.js"></script>
-<script src="gemini.js"></script>
-<script src="deepseek.js"></script>
-<script src="chatgpt.js"></script>
-<script src="app.js"></script>
-
+<!-- Scriptler -->
+<script src="scripts/gemini.js"></script>
+<script src="scripts/deepseek.js"></script>
+<script src="scripts/chatgpt.js"></script>
+<script src="scripts/watsonx.js"></script>
+<script src="scripts/anthropic.js"></script>
+<script src="scripts/mistral.js"></script>
+<script src="scripts/cohere.js"></script>
+<script src="scripts/ai21.js"></script>
+<script src="scripts/huggingface.js"></script>
+<script src="scripts/app.js"></script>
 </body>
 </html>

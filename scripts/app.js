@@ -51,6 +51,11 @@ async function runModel(model, prompt) {
     if (model === "deepseek") return await sendToDeepSeek(prompt);
     if (model === "chatgpt") return await sendToChatGPT(prompt);
     if (model === "watsonx") return await sendToWatsonX(prompt);
+    if (model === "claude") return await sendToClaude(prompt);
+    if (model === "mistral") return await sendToMistral(prompt);
+    if (model === "cohere") return await sendToCohere(prompt);
+    if (model === "ai21") return await sendToAI21(prompt);
+    if (model === "huggingface") return await sendToHF(prompt);
 
     throw new Error("Bilinmeyen model: " + model);
 }
