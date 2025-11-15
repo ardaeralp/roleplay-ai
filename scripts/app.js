@@ -45,6 +45,21 @@ document.getElementById("stepBtn").addEventListener("click", async () => {
     }
 });
 
+document.getElementById("downloadBtn").addEventListener("click", () => {
+    const convo = document.getElementById("conversation").value;
+    if (!convo) {
+        alert("Diyalog alanı boş!");
+        return;
+    }
+
+    const blob = new Blob([convo], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "diyalog.txt"; // Dosya adı
+    a.click();
+    URL.revokeObjectURL(url);
+});
 
 async function runModel(model, prompt) {
     if (model === "gemini") return await sendToGemini(prompt);
