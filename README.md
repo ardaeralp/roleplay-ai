@@ -29,7 +29,6 @@ Uygulama, **Gemini**, **DeepSeek**, **ChatGPT**, **WatsonX**, **Claude**, **Mist
 
 2.	**VS Code veya başka bir IDE’de açın.**
 3.	**Basit Python HTTP Server ile çalıştırabilirsiniz:**
-# Python 3
 python -m http.server 8000
 4.	**Tarayıcıda açın:**
 http://localhost:8000
