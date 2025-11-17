@@ -69,7 +69,24 @@
         <textarea id="conversation" readonly></textarea>
         <button id="downloadBtn">Diyaloğu İndir (.txt)</button>
     </div>
+    <h3>Hafıza Yönetimi</h3>
+
+    <div class="memory-panel">
+        <button id="showMemoryBtn">Memory Panelini Aç/Kapat</button>
+        <button id="clearMemoryBtn">Hafızayı Temizle</button>
+        <button id="downloadMemoryBtn">Hafızayı İndir (JSON)</button>
+        <input type="file" id="uploadMemoryFile" accept="application/json">
+    </div>
+
+    <div id="memoryContainer" style="display:none; border:1px solid #ccc; padding:10px; margin-top:10px;">
+        <h4>Ajan A Hafızası</h4>
+        <pre id="memoryAtext"></pre>
+
+        <h4>Ajan B Hafızası</h4>
+        <pre id="memoryBtext"></pre>
+    </div>
 </div>
+
 
 <!-- Scriptler -->
 <script src="scripts/gemini.js"></script>
@@ -81,6 +98,7 @@
 <script src="scripts/cohere.js"></script>
 <script src="scripts/ai21.js"></script>
 <script src="scripts/huggingface.js"></script>
-<script src="scripts/app.js"></script>
+<script src="scripts/longmemory.js"></script>
+<script type="module" src="scripts/app.js"></script>
 </body>
 </html>

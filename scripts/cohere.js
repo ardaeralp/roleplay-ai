@@ -1,5 +1,6 @@
 const COHERE_API_KEY = "COHERE_API_KEYINIZ";
 
+
 async function sendToCohere(userInput) {
     try {
         const response = await fetch("https://api.cohere.ai/v2/chat", {

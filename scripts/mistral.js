@@ -2,14 +2,14 @@ const MISTRAL_API_KEY = "MISTRAL_API_KEYINIZ";
 
 async function sendToMistral(userInput) {
     try {
-        const response = await fetch("https://api.mistral.ai/v1/generate", {
+        const response = await fetch("https://corsproxy.io/?https://api.mistral.ai/v1/generate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${MISTRAL_API_KEY}`
             },
             body: JSON.stringify({
-                model: "mistral-7b",
+                model: "mistral-small-latest",
                 prompt: userInput,
                 max_tokens: 1000
             })

@@ -1,6 +1,6 @@
 // gemini.js - Gemini API Wrapper
 
-const GEMINI_API_KEY = ""; // Buraya kendi key'inizi yazın
+const GEMINI_API_KEY = "GEMINI_API_KEYINIZ"; // Buraya kendi key'inizi yazın
 const GEMINI_MODEL = "gemini-2.5-flash";
 
 async function sendToGemini(inputText) {
