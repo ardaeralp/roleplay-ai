@@ -1,62 +1,83 @@
 # RolePlay AI – Multi-Agent Conversational Platform 🤖💬
 
-RolePlay AI, birden fazla yapay zekâ ajanını rol ve isim atayarak adım adım sohbet ettirebileceğiniz interaktif bir web uygulamasıdır.  
-Uygulama, **Gemini**, **DeepSeek**, **ChatGPT**, **WatsonX**, **Claude**, **Mistral**, **Cohere**, **AI21**, **HuggingFace** gibi popüler AI modelleriyle çalışabilir ve **long-term memory** entegrasyonu ile konuşmaları uzun süre hafızasında tutabilir.
+**RolePlay AI** is an interactive web application that allows you to orchestrate step-by-step conversations between multiple AI agents by assigning them specific roles and identities.  
+The application supports popular AI models such as **Gemini**, **DeepSeek**, **ChatGPT**, **WatsonX**, **Claude**, **Mistral**, **Cohere**, **AI21**, and **HuggingFace**, and includes **long-term memory** capabilities to retain and summarize conversations over time.
 
 ---
 
-## 🌟 Özellikler
+## 🌟 Features
 
-- **Çoklu AI Ajanları**: İki AI ajanını seçerek birbirleriyle diyalog oluşturabilirsiniz.
-- **Rol ve İsim Atama**: Her ajana rol ve isim atayarak senaryolar oluşturabilirsiniz.
-- **Adım Adım Konuşma**: "Bir Adım" butonuyla adım adım sohbet akışı sağlar.
-- **Long-Term Memory**: Konuşmalar uzun süre hafızada tutulur ve önemli noktalar özetlenir.
-- **Memory Paneli**: Hafızayı kullanıcı arayüzünde görüntüleyebilirsiniz.
-- **JSON Hafıza Export/Import**: Hafızayı kaydedebilir ve tekrar yükleyebilirsiniz.
-- **Hafıza Temizleme**: Tüm hafızayı tek tıkla sıfırlayabilirsiniz.
-- **Diyalog İndirme**: Tamamlanan konuşmayı `.txt` dosyası olarak indirebilirsiniz.
-- **Responsive UI**: Hem masaüstü hem mobil uyumlu tasarım.
-- **Loading & Error göstergeleri**: API çağrıları sırasında kullanıcıya bilgi verir.
+- **Multiple AI Agents**: Select two AI agents and let them engage in a structured dialogue.
+- **Role & Name Assignment**: Assign custom names and roles to each agent to create rich scenarios.
+- **Step-by-Step Conversation**: Progress the conversation incrementally using the *“One Step”* button.
+- **Long-Term Memory**: Conversations are stored and summarized for long-term context retention.
+- **Memory Panel**: View stored memory directly within the user interface.
+- **JSON Memory Export/Import**: Save memory to a file or reload it later.
+- **Clear Memory**: Reset all stored memory with a single click.
+- **Dialogue Download**: Export completed conversations as a `.txt` file.
+- **Responsive UI**: Fully responsive design for both desktop and mobile devices.
+- **Loading & Error Indicators**: Visual feedback during API calls and error states.
 
 ---
 
-## 🖥️ Kurulum ve Çalıştırma
+## 🖥️ Installation & Running the App
 
-1. **Projeyi klonlayın:**
+1. **Clone the repository:**
 
-"git clone https://github.com/kullaniciAdi/RolePlay-AI.git"
-"cd RolePlay-AI"
+```bash
+git clone https://github.com/username/RolePlay-AI.git
+cd RolePlay-AI
+```
 
-2.	**VS Code veya başka bir IDE’de açın.**
-3.	**Basit Python HTTP Server ile çalıştırabilirsiniz:**
+2. **Open the project in VS Code or your preferred IDE.**
+
+3. **Run using a simple Python HTTP server:**
+
+```bash
 python -m http.server 8000
-4.	**Tarayıcıda açın:**
-http://localhost:8000
+```
 
-## ⚙️ Kullanım
-	1.	Agent A ve Agent B isimlerini ve rollerini girin.
-	2.	Başlangıç mesajınızı yazın.
-	3.	AI modelini her ajan için seçin.
-	4.	“Bir Adım” butonuna basarak adım adım sohbeti ilerletin.
-	5.	Hafızayı görmek için Memory Paneli, indirmek için Memory JSON, temizlemek için Hafızayı Temizle butonlarını kullanabilirsiniz.
-	6.	Konuşmayı .txt olarak indirmek için Diyaloğu İndir butonunu kullanabilirsiniz.
+4. **Open in your browser:**
+
+```
+http://localhost:8000
+```
+
+---
+
+## ⚙️ Usage
+
+1. Enter names and roles for **Agent A** and **Agent B**.
+2. Write the initial message.
+3. Select an AI model for each agent.
+4. Click the **“One Step”** button to advance the conversation step by step.
+5. Use the **Memory Panel** to view memory, **Memory JSON** to export/import it, or **Clear Memory** to reset it.
+6. Use **Download Dialogue** to export the conversation as a `.txt` file.
+
+---
 
 ## 🧠 Long-Term Memory
-	•	Mesajlar birikerek short-term memory ve long-term summary olarak tutulur.
-	•	Belirli bir threshold’a ulaştığında önemli bilgiler özetlenir.
-	•	Memory JSON olarak indirilebilir veya yüklenebilir.
-	•	Hafıza temizleme ile tüm geçmiş sıfırlanabilir.
 
-## 🛠️ Desteklenen AI Modelleri
-	•	Gemini
-	•	DeepSeek
-	•	ChatGPT
-	•	WatsonX
-	•	Claude
-	•	Mistral
-	•	Cohere
-	•	AI21
-	•	HuggingFace
+- Messages are accumulated as **short-term memory** and periodically summarized into **long-term memory**.
+- When a defined threshold is reached, key information is summarized and retained.
+- Memory can be exported/imported as JSON files.
+- All stored memory can be cleared at any time.
 
-API anahtarlarını kendi environment’ınızda veya static olarak belirleyebilirsiniz.
-Client-side API kullanımı için güvenlik uyarısı: production ortamında server-side proxy önerilir.
+---
+
+## 🛠️ Supported AI Models
+
+- Gemini  
+- DeepSeek  
+- ChatGPT  
+- WatsonX  
+- Claude  
+- Mistral  
+- Cohere  
+- AI21  
+- HuggingFace  
+
+API keys can be configured via environment variables or statically.
+
+⚠️ **Security Notice:**  
+For client-side API usage, exposing API keys is not recommended. In production environments, a **server-side proxy** approach is strongly advised.
