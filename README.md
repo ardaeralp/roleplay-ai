@@ -81,3 +81,18 @@ API keys can be configured via environment variables or statically.
 
 ⚠️ **Security Notice:**  
 For client-side API usage, exposing API keys is not recommended. In production environments, a **server-side proxy** approach is strongly advised.
+
+📂 Project Structure
+RolePlay-AI/
+│
+├─ index.html          # Main UI
+├─ styles.css          # Styling
+├─ app.js              # Application logic
+├─ longmemory.js       # Long-term memory manager
+├─ i18n/
+│   ├─ tr.json         # Turkish translations
+│   ├─ en.json         # English translations
+│   └─ de.json         # German translations
+└─ README.md           # Documentation
+
+
