@@ -2,24 +2,28 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>RolePlay AI</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
 
 <div class="container">
-    <h1>RolePlay AI</h1>
+    <h1 data-i18n="title"></h1>
+    <select id="languageSelect">
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="de">🇩🇪 Deutsch</option>
+    </select>
     <div class="input-group">
-        <label>Agent A Adı:</label>
-        <input id="agentAname" type="text" placeholder="Örn: Ajan Alpha">
+        <label data-i18n="agentAName"></label>
+        <input id="agentAname" type="text" data-i18n-placeholder="agentANameDesc">
     </div>
     <div class="input-group">
-        <label>Agent A Rolü:</label>
-        <input id="agentArole" type="text" placeholder="Örn: Satış Uzmanı">
+        <label data-i18n="agentArole"></label>
+        <input id="agentArole" type="text" data-i18n-placeholder="agentArole">
     </div>
     <div class="input-group">
-        <label>Agent A Modeli:</label>
+        <label data-i18n="agentAmodel"></label>
         <select id="agentAmodel">
             <option value="gemini">Gemini</option>
             <option value="deepseek">DeepSeek</option>
@@ -34,15 +38,15 @@
     </div>
 
     <div class="input-group">
-        <label>Agent B Adı:</label>
-        <input id="agentBname" type="text" placeholder="Örn: Ajan Omega">
+        <label data-i18n="agentBName"></label>
+        <input id="agentBname" type="text" data-i18n-placeholder="agentBNameDesc">
     </div>
     <div class="input-group">
-        <label>Agent B Rolü:</label>
-        <input id="agentBrole" type="text" placeholder="Örn: Müşteri">
+        <label data-i18n="agentBrole"></label>
+        <input id="agentBrole" type="text" data-i18n-placeholder="agentBroleDesc">
     </div>
     <div class="input-group">
-        <label>Agent B Modeli:</label>
+        <label data-i18n="agentBmodel"></label>
         <select id="agentBmodel">
             <option value="gemini">Gemini</option>
             <option value="deepseek">DeepSeek</option>
@@ -57,32 +61,32 @@
     </div>
 
     <div class="input-group">
-        <label>Başlangıç Mesajı:</label>
-        <textarea id="startMessage" placeholder="Diyaloğu başlatacak mesajı yazın. Örn: İnternet paketi almak istiyorum."></textarea>
+        <label data-i18n="startMessagelbl"></label>
+        <textarea id="startMessage" data-i18n-placeholder="startMessage"></textarea>
     </div>
 
-    <button id="stepBtn">Çalıştır</button>
-    <div id="loading">Yükleniyor...</div>
+    <button id="stepBtn" data-i18n="stepBtn"></button>
+    <div id="loading" data-i18n="loadinglbl">Yükleniyor...</div>
     <div id="errorBox"></div>
     <div class="input-group">
-        <label>Diyalog:</label>
+        <label data-i18n="conversationlbl"></label>
         <textarea id="conversation" readonly></textarea>
-        <button id="downloadBtn">Diyaloğu İndir (.txt)</button>
+        <button id="downloadBtn" data-i18n="downloadBtn"></button>
     </div>
-    <h3>Hafıza Yönetimi</h3>
+    <h3 data-i18n="memoryManagement"></h3>
 
     <div class="memory-panel">
-        <button id="showMemoryBtn">Memory Panelini Aç/Kapat</button>
-        <button id="clearMemoryBtn">Hafızayı Temizle</button>
-        <button id="downloadMemoryBtn">Hafızayı İndir (JSON)</button>
+        <button id="showMemoryBtn" data-i18n="showMemoryBtn">Memory Panelini Aç/Kapat</button>
+        <button id="clearMemoryBtn" data-i18n="clearMemoryBtn">Hafızayı Temizle</button>
+        <button id="downloadMemoryBtn" data-i18n="downloadMemoryBtn">Hafızayı İndir (JSON)</button>
         <input type="file" id="uploadMemoryFile" accept="application/json">
     </div>
 
     <div id="memoryContainer" style="display:none; border:1px solid #ccc; padding:10px; margin-top:10px;">
-        <h4>Ajan A Hafızası</h4>
+        <h4 data-i18n="memoryA">Ajan A Hafızası</h4>
         <pre id="memoryAtext"></pre>
 
-        <h4>Ajan B Hafızası</h4>
+        <h4 data-i18n="memoryB">Ajan B Hafızası</h4>
         <pre id="memoryBtext"></pre>
     </div>
 </div>
@@ -99,6 +103,7 @@
 <script src="scripts/ai21.js"></script>
 <script src="scripts/huggingface.js"></script>
 <script src="scripts/longmemory.js"></script>
+<script src="scripts/i18n.js"></script>
 <script type="module" src="scripts/app.js"></script>
 </body>
 </html>

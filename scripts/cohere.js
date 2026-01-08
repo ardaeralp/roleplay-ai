@@ -1,4 +1,4 @@
-const COHERE_API_KEY = "COHERE_API_KEYINIZ";
+const COHERE_API_KEY = "dI7JxI4yyqeFIWO9d4cT54yuqF3nyezbBLbVOaBZ";
 
 
 async function sendToCohere(userInput) {

@@ -1,9 +1,12 @@
 import { LongMemoryManager } from "./longmemory.js";
+import { loadLanguage } from "./i18n.js";
+
+
 
 let lastMessage = "";
 // MEMORY MODÜLLERİ
-const memoryA = new LongMemoryManager(runModel, sendToGemini);
-const memoryB = new LongMemoryManager(runModel, sendToGemini);
+const memoryA = new LongMemoryManager(runModel, sendToAI21);
+const memoryB = new LongMemoryManager(runModel, sendToAI21);
 
 document.getElementById("conversation").value = ""; // textarea boşaltılır
 document.getElementById("stepBtn").addEventListener("click", async () => {
@@ -34,7 +37,7 @@ document.getElementById("stepBtn").addEventListener("click", async () => {
         // -----------------------------------------------------
         //   AJAN A — memoryA kullanır
         // -----------------------------------------------------
-        memoryA.addMessage("User", lastMessage);
+        memoryA.addMessage(agentBname, lastMessage);
         await memoryA.updateSummaryIfNeeded();
 
         const promptA =
@@ -174,4 +177,13 @@ document.getElementById("uploadMemoryFile").addEventListener("change", async (ev
     if (json.agentB) memoryB.importMemory(json.agentB);
 
     alert("Hafıza başarıyla yüklendi!");
+});
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadLanguage(localStorage.getItem("lang") || "tr");
+
+    document.getElementById("languageSelect").addEventListener("change", e => {
+        loadLanguage(e.target.value);
+    });
 });
