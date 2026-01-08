@@ -1,4 +1,4 @@
-const AI21_API_KEY = "AI21_API_KEYINIZ";
+const AI21_API_KEY = "e5632255-7413-4937-a244-a51de1367b06";
 
 async function sendToAI21(userInput) {
     try {
