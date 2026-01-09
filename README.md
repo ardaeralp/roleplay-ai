@@ -84,8 +84,8 @@ For client-side API usage, exposing API keys is not recommended. In production e
 
 ## 🛠️ 📂 Project Structure
 
-RolePlay-AI/
-│
+RolePlay-AI/ \n
+│ \n
 ├─ index.html          # Main UI
 ├─ styles.css          # Styling
 ├─ app.js              # Application logic
